@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render when component is mounted 1`] = `
+<div>
+  <div
+    class="innerfooter"
+  >
+    footer
+  </div>
+</div>
+`;

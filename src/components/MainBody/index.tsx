@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import './MainBody.css';
 import { useState } from 'react';
-import Card from '../Card/Card' // Import
+import Card from '../Card' // Import
 import {stockData} from '../../assets/data';
 // import * as cardImage from '/Users/nikhar_gangwar/reactWebsitePractice/my-app/src/assets/images/';
 // const imgAdd = '/Users/nikhar_gangwar/reactWebsitePractice/my-app/src/assets/images/';

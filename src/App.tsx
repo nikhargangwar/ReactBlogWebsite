@@ -1,8 +1,8 @@
 /* eslint-disable quotes */
 import React from 'react'
-import Navbar from './components/Navbar/Navbar' // Import
-import Footer from './components/Footer/Footer' // Import
-import MainBody from './components/MainBody/MainBody' // Import
+import Navbar from './components/Navbar' // Import
+import Footer from './components/Footer' // Import
+import MainBody from './components/MainBody' // Import
 
 import './App.css'
 

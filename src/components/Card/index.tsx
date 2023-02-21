@@ -7,7 +7,7 @@ import heartRedIcon from '/Users/nikhar_gangwar/reactWebsitePractice/my-app/src/
 import { useState } from 'react';
 
 interface propTypes {
-  date: string;
+        date: string;
   readingTime: string;
   title: string;
   description: string;
@@ -20,9 +20,20 @@ interface propTypes {
 function Card({date,readingTime,title,description,claps,liked,image}:propTypes){
 
 const [countClap,setCountClap]= useState(claps);
-const [isLiked,setIsLiked]=useState(liked)
+const [isLiked,setIsLiked]=useState(liked);
+const [flag,setFlag]= useState(false);
+
 const clickHandler =()=>{
   setCountClap(countClap+1);
+  // if(!flag)
+  // {setCountClap(countClap+1);
+  // setFlag(true);
+  // }
+  // else{
+  //   setCountClap(countClap-1);
+  //   setFlag(false);
+  // }
+   
 }
 
 // const imagePath =cardImage+image;
@@ -53,10 +64,10 @@ return(
     <hr id="cardLine" />
     <div className="cardReaction">
       <div className="clapCount">
-        <img onClick={clickHandler} src={clapIcon} />
-        <h5>{countClap}</h5>
+        <img className="clap-button"onClick={clickHandler} src={clapIcon} />
+        <h5 className="clap">{countClap}</h5>
       </div>
-      {isLiked ? <img onClick={heartClickHandler} src={heartRedIcon} alt="images" />:<img onClick={heartClickHandler} src={heartBankIcon} alt="images" />}
+      {isLiked ? <img className='like' onClick={heartClickHandler} src={heartRedIcon} alt="redHeart" />:<img className='like' onClick={heartClickHandler} src={heartBankIcon} alt="blackHeart" />}
       
     </div>
   </div>

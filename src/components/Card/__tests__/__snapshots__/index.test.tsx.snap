@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing for card component should render correctly with 0 claps 1`] = `
+<div>
+  <div
+    class="cardMain"
+  >
+    <div
+      class="cardImage"
+    >
+      <img
+        src="abstract.png"
+      />
+    </div>
+    <div
+      class="cardTime"
+    >
+      <h5>
+        2nd Januray, 2018
+      </h5>
+      <h5>
+        2 mins
+      </h5>
+    </div>
+    <div
+      class="cardTitle"
+    >
+      <h3>
+        The future of abstract art and the culture ...
+      </h3>
+    </div>
+    <div
+      class="cardDescription"
+    >
+      <h5>
+        Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...
+      </h5>
+    </div>
+    <hr
+      id="cardLine"
+    />
+    <div
+      class="cardReaction"
+    >
+      <div
+        class="clapCount"
+      >
+        <img
+          class="clap-button"
+          src="clapping.svg"
+        />
+        <h5
+          class="clap"
+        >
+          0
+        </h5>
+      </div>
+      <img
+        alt="blackHeart"
+        class="like"
+        src="heart-black.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`testing for card component should render correctly with liked 1`] = `
+<div>
+  <div
+    class="cardMain"
+  >
+    <div
+      class="cardImage"
+    >
+      <img
+        src="abstract.png"
+      />
+    </div>
+    <div
+      class="cardTime"
+    >
+      <h5>
+        2nd Januray, 2018
+      </h5>
+      <h5>
+        2 mins
+      </h5>
+    </div>
+    <div
+      class="cardTitle"
+    >
+      <h3>
+        The future of abstract art and the culture ...
+      </h3>
+    </div>
+    <div
+      class="cardDescription"
+    >
+      <h5>
+        Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...
+      </h5>
+    </div>
+    <hr
+      id="cardLine"
+    />
+    <div
+      class="cardReaction"
+    >
+      <div
+        class="clapCount"
+      >
+        <img
+          class="clap-button"
+          src="clapping.svg"
+        />
+        <h5
+          class="clap"
+        >
+          10
+        </h5>
+      </div>
+      <img
+        alt="redHeart"
+        class="like"
+        src="heart-red.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`testing for card component should toggle like on click 1`] = `
+<div>
+  <div
+    class="cardMain"
+  >
+    <div
+      class="cardImage"
+    >
+      <img
+        src="abstract.png"
+      />
+    </div>
+    <div
+      class="cardTime"
+    >
+      <h5>
+        2nd Januray, 2018
+      </h5>
+      <h5>
+        2 mins
+      </h5>
+    </div>
+    <div
+      class="cardTitle"
+    >
+      <h3>
+        The future of abstract art and the culture ...
+      </h3>
+    </div>
+    <div
+      class="cardDescription"
+    >
+      <h5>
+        Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your...
+      </h5>
+    </div>
+    <hr
+      id="cardLine"
+    />
+    <div
+      class="cardReaction"
+    >
+      <div
+        class="clapCount"
+      >
+        <img
+          class="clap-button"
+          src="clapping.svg"
+        />
+        <h5
+          class="clap"
+        >
+          10
+        </h5>
+      </div>
+      <img
+        alt="blackHeart"
+        class="like"
+        src="heart-black.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
