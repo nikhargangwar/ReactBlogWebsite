@@ -1,4 +1,16 @@
-.footer {
+.App {
+    margin: 0px;
+  }
+  
+  .header {
+    background-color: #000;
+    height: 13vh;
+    width: 100%;
+    z-index: 999;
+    color: #fff;
+  }
+  
+  .footer {
     flex: none;
   
     bottom: 0;
@@ -10,11 +22,3 @@
     z-index: 999;
     color: #fff;
   }
-  .innerfooter {
-    width: 70%;
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}

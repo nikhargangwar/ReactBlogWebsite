@@ -3,11 +3,16 @@ import './Card.css';
 import clapIcon from '/Users/nikhar_gangwar/reactWebsitePractice/my-app/src/assets/Icons/clapping.svg';
 import heartBankIcon from '/Users/nikhar_gangwar/reactWebsitePractice/my-app/src/assets/Icons/heart-black.svg';
 import heartRedIcon from '/Users/nikhar_gangwar/reactWebsitePractice/my-app/src/assets/Icons/heart-red.svg';
+import { getFormattedDateFromUtcDate, updateBlogData } from '../../utils/common';
+import makeRequest from '../../utils/makeRequest';
+import { UPDATE_BLOG_DATA } from '../../constants/apiEndPoints';
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { BlogPostContext } from '../../context/BlogPostContext';
 
 interface propTypes {
-        date: string;
+  id:number;
+  date: string;
   readingTime: string;
   title: string;
   description: string;
@@ -17,40 +22,58 @@ interface propTypes {
 }
 
 
-function Card({date,readingTime,title,description,claps,liked,image}:propTypes){
+function Card({id,date,readingTime,title,description,claps,liked,image}:propTypes){
 
-const [countClap,setCountClap]= useState(claps);
-const [isLiked,setIsLiked]=useState(liked);
-const [flag,setFlag]= useState(false);
+  const {allBlogData,setAllBlogData} = useContext(BlogPostContext)
 
-const clickHandler =()=>{
-  setCountClap(countClap+1);
-  // if(!flag)
-  // {setCountClap(countClap+1);
-  // setFlag(true);
-  // }
-  // else{
-  //   setCountClap(countClap-1);
-  //   setFlag(false);
-  // }
-   
+// const [isLiked,setIsLiked]=useState(liked);
+
+const clickHandler =async()=>{
+  if (allBlogData) {
+  try {
+    await makeRequest(UPDATE_BLOG_DATA(id), {
+      data: { claps: claps + 1 },
+    });
+    updateBlogData(
+      {
+        id,date,readingTime,title,description,claps:claps+1,liked,image
+      },
+      allBlogData,
+      setAllBlogData
+    );  } catch (e) {
+    // TODO: Handle error
+  }
+}
 }
 
 // const imagePath =cardImage+image;
 
-const heartClickHandler=()=>{
-  setIsLiked(!isLiked);
+const heartClickHandler=async()=>{
+  if (allBlogData) {
+    try {
+      await makeRequest(UPDATE_BLOG_DATA(id), {
+        data: { liked: !liked },
+      });
+      updateBlogData(
+        {
+          id,date,readingTime,title,description,claps,liked:!liked,image
+        },
+        allBlogData,
+        setAllBlogData
+      );
+    } catch (e) {
+      // TODO: Handle error
+    }
+  }
 }
 
-console.log(image);
-
 return(
-    <div className="cardMain">
+    <div className="cardMain" data-testid="blog-post">
     <div className="cardImage">
-      <img src={require(`../../assets/images/${image}`)} />
+      <img src={image} />
     </div>
     <div className="cardTime">
-      <h5>{date}</h5>
+      <h5>{getFormattedDateFromUtcDate(date)}</h5>
       <h5>{readingTime}</h5>
     </div>
     <div className="cardTitle">
@@ -64,10 +87,10 @@ return(
     <hr id="cardLine" />
     <div className="cardReaction">
       <div className="clapCount">
-        <img className="clap-button"onClick={clickHandler} src={clapIcon} />
-        <h5 className="clap">{countClap}</h5>
+        <img className="clap-button" data-testid="clap-button" onClick={clickHandler} src={clapIcon} />
+        <h5 className="clap" data-testid="clap">{claps}</h5>
       </div>
-      {isLiked ? <img className='like' onClick={heartClickHandler} src={heartRedIcon} alt="redHeart" />:<img className='like' onClick={heartClickHandler} src={heartBankIcon} alt="blackHeart" />}
+      {liked ? <img className='like' onClick={heartClickHandler} src={heartRedIcon} alt="redHeart" />:<img className='like' onClick={heartClickHandler} src={heartBankIcon} alt="blackHeart" />}
       
     </div>
   </div>

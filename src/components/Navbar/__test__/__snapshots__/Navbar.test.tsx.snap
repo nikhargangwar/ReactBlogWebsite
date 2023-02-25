@@ -3,36 +3,41 @@
 exports[`Header should render when component is mounted 1`] = `
 <div>
   <div
-    id="innerheader"
+    class="header"
   >
     <div
-      id="innerHeadContainer1"
-    >
-      <h2>
-        The Artifacts
-      </h2>
-      <h4>
-        <i>
-          Culture & Art blog
-        </i>
-      </h4>
-    </div>
-    <div
-      color="black"
-      id="innerHeadContainer2"
+      id="innerheader"
     >
       <div
-        class="options"
+        id="innerHeadContainer1"
       >
-        <h5>
-          Blog
-        </h5>
-        <h5>
-          About
-        </h5>
-        <h5>
-          Contact
-        </h5>
+        <h2>
+          The Artifacts
+        </h2>
+        <h4>
+          <i>
+            Culture & Art blog
+          </i>
+        </h4>
+      </div>
+      <div
+        color="black"
+        id="innerHeadContainer2"
+      >
+        <div
+          class="options"
+          data-testid="custom-element"
+        >
+          <h5>
+            Blog
+          </h5>
+          <h5>
+            About
+          </h5>
+          <h5>
+            Contact
+          </h5>
+        </div>
       </div>
     </div>
   </div>

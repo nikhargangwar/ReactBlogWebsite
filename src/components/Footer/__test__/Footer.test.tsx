@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render,screen } from '@testing-library/react';
 import Footer from '..';
 
 describe('Footer', () => {
@@ -7,4 +7,11 @@ describe('Footer', () => {
     const { container } = render(<Footer />);
     expect(container).toMatchSnapshot();
   });
+
+  // check if footer text is rendered in footer container
+  it('should have footer text in it',()=>{
+    const { container } = render(<Footer />);
+    const linkElement = screen.getByText('footer');
+    expect(linkElement).toBeInTheDocument();
+  })
 });

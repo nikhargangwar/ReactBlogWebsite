@@ -3,9 +3,14 @@
 exports[`Footer should render when component is mounted 1`] = `
 <div>
   <div
-    class="innerfooter"
+    class="footer"
   >
-    footer
+    <div
+      class="innerfooter"
+    >
+      footer
+    </div>
+    ;
   </div>
 </div>
 `;

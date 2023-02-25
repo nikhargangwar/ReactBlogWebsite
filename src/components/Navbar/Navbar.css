@@ -1,3 +1,11 @@
+
+.header {
+    background-color: #000;
+    height: 13vh;
+    width: 100%;
+    z-index: 999;
+    color: #fff;
+  }
 #innerheader {
     width: 70%;
     margin: 0 auto;

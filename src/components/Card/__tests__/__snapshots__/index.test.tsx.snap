@@ -4,6 +4,7 @@ exports[`testing for card component should render correctly with 0 claps 1`] = `
 <div>
   <div
     class="cardMain"
+    data-testid="blog-post"
   >
     <div
       class="cardImage"
@@ -16,7 +17,9 @@ exports[`testing for card component should render correctly with 0 claps 1`] = `
       class="cardTime"
     >
       <h5>
-        2nd Januray, 2018
+        NaNth
+      undefined, 
+      NaN
       </h5>
       <h5>
         2 mins
@@ -47,10 +50,12 @@ exports[`testing for card component should render correctly with 0 claps 1`] = `
       >
         <img
           class="clap-button"
+          data-testid="clap-button"
           src="clapping.svg"
         />
         <h5
           class="clap"
+          data-testid="clap"
         >
           0
         </h5>
@@ -69,6 +74,7 @@ exports[`testing for card component should render correctly with liked 1`] = `
 <div>
   <div
     class="cardMain"
+    data-testid="blog-post"
   >
     <div
       class="cardImage"
@@ -81,7 +87,9 @@ exports[`testing for card component should render correctly with liked 1`] = `
       class="cardTime"
     >
       <h5>
-        2nd Januray, 2018
+        NaNth
+      undefined, 
+      NaN
       </h5>
       <h5>
         2 mins
@@ -112,10 +120,12 @@ exports[`testing for card component should render correctly with liked 1`] = `
       >
         <img
           class="clap-button"
+          data-testid="clap-button"
           src="clapping.svg"
         />
         <h5
           class="clap"
+          data-testid="clap"
         >
           10
         </h5>
@@ -130,10 +140,11 @@ exports[`testing for card component should render correctly with liked 1`] = `
 </div>
 `;
 
-exports[`testing for card component should toggle like on click 1`] = `
+exports[`testing for card component should render correctly with not liked 1`] = `
 <div>
   <div
     class="cardMain"
+    data-testid="blog-post"
   >
     <div
       class="cardImage"
@@ -146,7 +157,9 @@ exports[`testing for card component should toggle like on click 1`] = `
       class="cardTime"
     >
       <h5>
-        2nd Januray, 2018
+        NaNth
+      undefined, 
+      NaN
       </h5>
       <h5>
         2 mins
@@ -177,10 +190,12 @@ exports[`testing for card component should toggle like on click 1`] = `
       >
         <img
           class="clap-button"
+          data-testid="clap-button"
           src="clapping.svg"
         />
         <h5
           class="clap"
+          data-testid="clap"
         >
           10
         </h5>
